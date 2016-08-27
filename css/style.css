@@ -29,3 +29,12 @@ html,body{
     background: grey;
     height: 14%;
 }
+
+#startBtn{
+    width : 200px;
+    height: 100px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    top:50%;
+}
