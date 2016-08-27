@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    width:100%;
+    height: 100%;
+    background: yellow;
+}
+.wrapper{
+    width: 900px;
+    height:100%;
+    margin:0 auto;
+}
+#header{
+    background:red;
+    height:12%;
+    border: 2px solid black;
+    border-style:solid;
+    margin-bottom: 5px;
+
+}
+#contentContainer{
+    background:blue;
+    height:70%;
+    margin-bottom: 5px;
+}
+#footer{
+    background: grey;
+    height: 14%;
+}
