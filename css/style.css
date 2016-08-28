@@ -25,12 +25,19 @@ html,body{
     height:70%;
     margin-bottom: 5px;
 }
+#gameContainer{
+    display:none;
+    background:black; 
+    height:70%;
+    margin-bottom:5px;
+   
+}
 #footer{
     background: grey;
     height: 14%;
 }
 
-#startBtn{
+#BtnStart{
     width : 200px;
     height: 100px;
     position: relative;
