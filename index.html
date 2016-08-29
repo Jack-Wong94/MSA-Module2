@@ -5,7 +5,12 @@
         <link rel = "stylesheet" type="text/css" href="css/style.css">
          <script src="js/basic.js"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        
+        <script>$(document).ready(function(){
+    $("#try").click(function(){
+        alert("The paragraph was clicked.");
+    });
+});
+</script>
     </head>
     <body>
         <div class="wrapper">
@@ -16,7 +21,7 @@
                 <button id = "BtnStart" onclick="start()"> Start</button>
             </div>
             <div id = "gameContainer">
-                <button class="BtnGame"></button>
+                <button class="BtnGame" id="1" onclick="getPicture(id)"></button>
                 <button class="BtnGame"></button>
                 <button class="BtnGame"></button>
                 <button class="BtnGame"></button>
