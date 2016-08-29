@@ -24,12 +24,14 @@ html,body{
     background:blue;
     height:70%;
     margin-bottom: 5px;
+    overflow:auto;
 }
 #gameContainer{
     display:none;
-    background:black; 
+    background:silver; 
     height:70%;
     margin-bottom:5px;
+    overflow: auto;
    
 }
 #footer{
@@ -44,4 +46,12 @@ html,body{
     display: block;
     margin: 0 auto;
     top:50%;
+}
+.BtnGame{
+    height:50px;
+    width:50px;
+    background:green;
+    position:relative;
+    margin:50px 40px;
+    left:60px;
 }
