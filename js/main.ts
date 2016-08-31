@@ -1,6 +1,6 @@
 var BtnGame = $(".BtnGame");
 BtnGame.on("click",function(){
-    alert("kdsf");
+    sweetAlert("sdfsdf");
 });
 function start(){
     $("#contentContainer").hide();
@@ -13,11 +13,7 @@ function getPicture(id:string){
     
     document.getElementById(id).innerHTML="5";
 }
-$(document).ready(function(){
-    $("#BtnStart").click(function(){
-        alert("The paragraph was clicked.");
-    });
-});
+
 
 class GameButton{
     id:string;
