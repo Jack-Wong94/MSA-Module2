@@ -55,3 +55,6 @@ html,body{
     margin:50px 40px;
     left:60px;
 }
+#BtnMenu{
+    display:none;
+}
