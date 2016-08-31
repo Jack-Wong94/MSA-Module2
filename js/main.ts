@@ -1,3 +1,7 @@
+var BtnGame = $(".BtnGame");
+BtnGame.on("click",function(){
+    alert("kdsf");
+});
 function start(){
     $("#contentContainer").hide();
     $("#gameContainer").show();
@@ -10,7 +14,7 @@ function getPicture(id:string){
     document.getElementById(id).innerHTML="5";
 }
 $(document).ready(function(){
-    $(".BtnGame").click(function(){
+    $("#BtnStart").click(function(){
         alert("The paragraph was clicked.");
     });
 });
