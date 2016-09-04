@@ -4,6 +4,7 @@ var BtnMenu = $("#BtnMenu");
 var contentContainer = $("#contentContainer");
 var gameContainer = $("#gameContainer");
 var freq = 0;
+var isClicked = [];
 
 BtnMenu.on("click", function () {
     swal({
@@ -40,6 +41,7 @@ function start() {
 function getPicture(id) {
     document.getElementById(id).innerHTML = id;
     freq++;
+    isClicked.push(id);
     if (freq == 3) {
         $(function () {
             $('.BtnGame').prop('disabled', true);
@@ -48,6 +50,7 @@ function getPicture(id) {
             $(function () {
                 $('.BtnGame').prop('disabled', false);
             });
+
             freq = 0;
             document.getElementById(id).innerHTML = "Press";
         }, 2000);
