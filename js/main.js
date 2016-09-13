@@ -8,6 +8,7 @@ var isClicked = [];
 var score = 0;
 var previousPicture;
 var previousPictureid;
+var clock;
 
 BtnMenu.on("click", function () {
     swal({
@@ -20,6 +21,8 @@ BtnMenu.on("click", function () {
         gameContainer.hide();
         contentContainer.show();
         BtnMenu.hide();
+        clock.stop();
+        clock.setTime(300);
     });
 });
 
@@ -30,6 +33,8 @@ BtnStart.on("click", function () {
     contentContainer.hide();
     gameContainer.show();
     BtnMenu.show();
+    clock.setCountdown(true);
+    clock.start();
 });
 
 function start() {
@@ -80,6 +85,14 @@ function getPicture(id, picture) {
 function changeScore(score) {
     $('#score').text("Score: " + score);
 }
+$(document).ready(function () {
+    clock = $('.clock').FlipClock({
+        clockFace: 'MinuteCounter',
+        autoStart: false,
+        countdown: true
+    });
+    clock.setTime(300);
+});
 
 var GameButton = (function () {
     function GameButton(id) {

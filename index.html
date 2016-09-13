@@ -6,19 +6,25 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./node_modules/sweetalert/dist/sweetalert.css">
         <script src="./node_modules/sweetalert/dist/sweetalert.min.js"></script>
+
+        <link rel="stylesheet" href="./node_modules/flipclock/compiled/flipclock.css">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script src="./node_modules/flipclock/compiled/flipclock.js"></script>
     </head>
     <body>
-
-
         <div class="wrapper">
             <div id="header">
-                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
                 <div id="status"></div>
-                
+                <div class="clock" style="margin:2em;"></div>
+	              <div class="message"></div>
+
+	                
             </div>
             <div id="contentContainer">
+              
                 <button id = "BtnStart"> Start</button>
                 
             </div>
@@ -56,7 +62,16 @@
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./node_modules/flipclock/compiled/flipclock.css">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script src="./node_modules/flipclock/compiled/flipclock.js"></script>
     </body>
     
 </html>
+    
+
+
+
     

@@ -23,6 +23,7 @@ html,body{
 #contentContainer{
     background:blue;
     height:70%;
+    width:100%;
     margin-bottom: 5px;
     overflow:auto;
 }
@@ -30,6 +31,7 @@ html,body{
     display:none;
     background:silver; 
     height:70%;
+    width:100%;
     margin-bottom:5px;
     overflow: auto;
    
@@ -60,4 +62,20 @@ html,body{
 }
 #score{
     float: right;
+}
+
+.clock {
+ position: relative !important;
+ padding-top: 0px;
+ margin-left: -314px;
+ top:-40%;
+ left: 50%;
+ height:100px;
+ width: 800px;
+
+ transform: scale(.54);
+ -ms-transform: scale(.54); 
+ -webkit-transform: scale(.54); 
+ -o-transform: scale(.54); 
+ -moz-transform: scale(.54); 
 }
