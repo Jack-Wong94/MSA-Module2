@@ -94,13 +94,29 @@ function getPicture(id:string,picture:string){
 function changeScore(score:number){
     $('#score').text("Score: "+score);
 }
- $(document).ready(function() {
+$(document).ready(function() {
 	    clock = $('.clock').FlipClock({
 		clockFace: 'MinuteCounter',
         autoStart: false,
-        countdown: true
+        countdown: true,
+        callbacks:{
+            stop: function(){
+               swal({
+                   title: "Game Over",
+                   text: "Sorry! You lose the game!"
+               }, function(){
+                    gameContainer.hide();
+                    contentContainer.show();
+                    BtnMenu.hide();
+                    clock.stop();
+                    clock.setTime(300);
+               });
+            
+            }
+        }
 	});
     clock.setTime(300);
+    
 });
 
 class GameButton{
