@@ -80,7 +80,13 @@ function getPicture(id:string,picture:string){
             changeScore(score);
         });
     }
-    
+    if (score==12){
+        swal("Congratulation!! You win the game!");
+        for (var i=1;i<=24;i++){
+            document.getElementById(i).innerHTML="Press";
+        }
+        changeScore(0);
+    }
 
 }
 function changeScore(score:number){
