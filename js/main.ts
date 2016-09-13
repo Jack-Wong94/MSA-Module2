@@ -77,13 +77,15 @@ function getPicture(id:string,picture:string){
         $(function(){
             score++;
             freq = 0;
-            alert(score);
+            changeScore(score);
         });
     }
     
 
 }
-
+function changeScore(score:number){
+    $('#score').text("Score: "+score);
+}
 
 class GameButton{
     id:string;

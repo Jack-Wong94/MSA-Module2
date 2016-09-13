@@ -66,9 +66,12 @@ function getPicture(id, picture) {
         $(function () {
             score++;
             freq = 0;
-            alert(score);
+            changeScore(score);
         });
     }
+}
+function changeScore(score) {
+    $('#score').text("Score: " + score);
 }
 
 var GameButton = (function () {

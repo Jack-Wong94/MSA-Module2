@@ -58,3 +58,6 @@ html,body{
 #BtnMenu{
     display:none;
 }
+#score{
+    float: right;
+}
