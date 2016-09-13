@@ -5,6 +5,9 @@ var contentContainer = $("#contentContainer");
 var gameContainer = $("#gameContainer");
 var freq = 0;
 var isClicked = [];
+var score = 0;
+var previousPicture;
+var previousPictureid;
 
 BtnMenu.on("click", function () {
     swal({
@@ -38,11 +41,15 @@ function start() {
     var gameBtn = new GameButton("1");
     gameBtn.setGameButton(6);
 }
-function getPicture(id) {
-    document.getElementById(id).innerHTML = id;
+function getPicture(id, picture) {
+    document.getElementById(id).innerHTML = picture;
     freq++;
     isClicked.push(id);
-    if (freq == 3) {
+    if (freq == 1) {
+        previousPictureid = id;
+        previousPicture = picture;
+    }
+    if (freq == 2 && previousPicture != picture) {
         $(function () {
             $('.BtnGame').prop('disabled', true);
         });
@@ -52,8 +59,15 @@ function getPicture(id) {
             });
 
             freq = 0;
+            document.getElementById(previousPictureid).innerHTML = "Press";
             document.getElementById(id).innerHTML = "Press";
         }, 2000);
+    } else if (freq == 2 && previousPicture == picture) {
+        $(function () {
+            score++;
+            freq = 0;
+            alert(score);
+        });
     }
 }
 
