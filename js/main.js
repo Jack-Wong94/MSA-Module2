@@ -84,6 +84,7 @@ var GameButton = (function () {
     return GameButton;
 })();
 
+// This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
