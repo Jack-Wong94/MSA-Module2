@@ -63,14 +63,20 @@ function getPicture(id, picture) {
             freq = 0;
             document.getElementById(previousPictureid).innerHTML = "Press";
             document.getElementById(id).innerHTML = "Press";
-        }, 2000);
+        }, 1000);
     } else if (freq == 2 && previousPicture == picture) {
         $(function () {
             score++;
             freq = 0;
             changeScore(score);
-            document.getElementById(id).disabled = true;
-            document.getElementById(previousPictureid).disabled = true;
+            var cid = document.getElementById(id);
+            var pid = document.getElementById(previousPictureid);
+            cid.disabled = true;
+            pid.disabled = true;
+            cid.style.color = "black";
+            pid.style.color = "black";
+            cid.style.background = "#ffff80";
+            pid.style.background = "#ffff80";
         });
     }
 
