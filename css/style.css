@@ -9,7 +9,7 @@ html,body{
 }
 .wrapper{
     width: 900px;
-    height:100%;
+    height:950px;
     margin:0 auto;
 }
 #header{
@@ -50,12 +50,13 @@ html,body{
     top:50%;
 }
 .BtnGame{
-    height:50px;
-    width:50px;
+    height:24%;
+    width:15%;
     background:green;
     position:relative;
-    margin:50px 40px;
-    left:60px;
+    margin:0 0;
+    left:35px;
+    top:15px;
 }
 #BtnMenu{
     display:none;
@@ -65,12 +66,12 @@ html,body{
 }
 
 .clock {
- position: relative !important;
+ position: relative;
  padding-top: 0px;
  margin-left: -314px;
- top:-40%;
+ 
  left: 50%;
- height:100px;
+ height:90%;
  width: 800px;
 
  transform: scale(.54);

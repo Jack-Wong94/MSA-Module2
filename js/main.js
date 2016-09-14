@@ -49,6 +49,7 @@ function getPicture(id, picture) {
     if (freq == 1) {
         previousPictureid = id;
         previousPicture = picture;
+        document.getElementById(id).disabled = true;
     }
     if (freq == 2 && previousPicture != picture) {
         $(function () {
@@ -116,6 +117,9 @@ function reset() {
     BtnMenu.hide();
     clock.stop();
     clock.setTime(300);
+    previousPicture = 0;
+    previousPictureid = 0;
+    freq = 0;
     $('.BtnGame').prop('disabled', false);
 }
 var GameButton = (function () {
