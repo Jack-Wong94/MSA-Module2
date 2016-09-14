@@ -127,20 +127,10 @@ $(document).ready(function() {
 });
 
 function reset(){
-    score = 0;
-    $('#score').text("Score: 0");
-    for (var i=1;i<=24;i++){
-        document.getElementById(i).innerHTML="Press";
-    }
-    gameContainer.hide();
-    contentContainer.show();
-    BtnMenu.hide();
-    clock.stop();
-    clock.setTime(300);
-    previousPicture = 0;
-    previousPictureid = 0;
-    freq = 0;
-    $('.BtnGame').prop('disabled',false);
+    
+   
+    location.reload();
+    
 }
 class GameButton{
     id:string;
@@ -195,7 +185,7 @@ class GameButton{
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.5' // use graph api version 2.5
+    version    : 'v2.7' // use graph api version 2.5
   });
 
   // Now that we've initialized the JavaScript SDK, we call 

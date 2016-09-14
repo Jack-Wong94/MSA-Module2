@@ -113,20 +113,7 @@ $(document).ready(function () {
 });
 
 function reset() {
-    score = 0;
-    $('#score').text("Score: 0");
-    for (var i = 1; i <= 24; i++) {
-        document.getElementById(i).innerHTML = "Press";
-    }
-    gameContainer.hide();
-    contentContainer.show();
-    BtnMenu.hide();
-    clock.stop();
-    clock.setTime(300);
-    previousPicture = 0;
-    previousPictureid = 0;
-    freq = 0;
-    $('.BtnGame').prop('disabled', false);
+    location.reload();
 }
 var GameButton = (function () {
     function GameButton(id) {
@@ -178,7 +165,7 @@ window.fbAsyncInit = function () {
         cookie: true,
         // the session
         xfbml: true,
-        version: 'v2.5'
+        version: 'v2.7'
     });
 
     // Now that we've initialized the JavaScript SDK, we call
