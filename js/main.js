@@ -18,11 +18,7 @@ BtnMenu.on("click", function () {
         closeOnConfirm: true,
         showLoaderOnConfirm: true
     }, function () {
-        gameContainer.hide();
-        contentContainer.show();
-        BtnMenu.hide();
-        clock.stop();
-        clock.setTime(300);
+        reset();
     });
 });
 
@@ -72,14 +68,19 @@ function getPicture(id, picture) {
             score++;
             freq = 0;
             changeScore(score);
+            document.getElementById(id).disabled = true;
+            document.getElementById(previousPictureid).disabled = true;
         });
     }
+
     if (score == 12) {
-        swal("Congratulation!! You win the game!");
-        for (var i = 1; i <= 24; i++) {
-            document.getElementById(i).innerHTML = "Press";
-        }
-        changeScore(0);
+        var time = 300 - clock.getTime();
+        swal({
+            title: "Congratulation!",
+            text: "You have won the game in " + time + " seconds!!"
+        }, function () {
+            reset();
+        });
     }
 }
 function changeScore(score) {
@@ -96,11 +97,7 @@ $(document).ready(function () {
                     title: "Game Over",
                     text: "Sorry! You lose the game!"
                 }, function () {
-                    gameContainer.hide();
-                    contentContainer.show();
-                    BtnMenu.hide();
-                    clock.stop();
-                    clock.setTime(300);
+                    reset();
                 });
             }
         }
@@ -108,6 +105,19 @@ $(document).ready(function () {
     clock.setTime(300);
 });
 
+function reset() {
+    score = 0;
+    $('#score').text("Score: 0");
+    for (var i = 1; i <= 24; i++) {
+        document.getElementById(i).innerHTML = "Press";
+    }
+    gameContainer.hide();
+    contentContainer.show();
+    BtnMenu.hide();
+    clock.stop();
+    clock.setTime(300);
+    $('.BtnGame').prop('disabled', false);
+}
 var GameButton = (function () {
     function GameButton(id) {
         this.id = id;
