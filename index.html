@@ -6,11 +6,8 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./node_modules/sweetalert/dist/sweetalert.css">
         <script src="./node_modules/sweetalert/dist/sweetalert.min.js"></script>
-
         <link rel="stylesheet" href="./node_modules/flipclock/compiled/flipclock.css">
-
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
 		<script src="./node_modules/flipclock/compiled/flipclock.js"></script>
     </head>
     <body>
@@ -19,12 +16,16 @@
                 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
                 <div id="status"></div>
                 <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                <div class="clock" style="margin:2em;"></div>
-	              
-
-	                
+                <div class="clock" style="margin:2em;"></div>  
             </div>
             <div id="contentContainer">
+                <h1> Memory Game</h1>
+                <ol class="description">
+                    <li> Turn over any two cards.</li>
+                    <li> If the two cards match, keep them.</li>
+                    <li> If they don't match, turn them back.</li>
+                    <li> The game is over when all cards have been matched.</li>
+                </ol>
               
                 <button id = "BtnStart"> Start</button>
                 
@@ -60,13 +61,11 @@
                 <h1 id="score">Score: 0</h1>
             </div>
         </div>
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./js/main.js"></script>
-    <link rel="stylesheet" href="./node_modules/flipclock/compiled/flipclock.css">
-
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./js/main.js"></script>
+        <link rel="stylesheet" href="./node_modules/flipclock/compiled/flipclock.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
 		<script src="./node_modules/flipclock/compiled/flipclock.js"></script>
     </body>
     

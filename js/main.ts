@@ -5,12 +5,12 @@ var BtnMenu = $("#BtnMenu");
 var contentContainer = $("#contentContainer");
 var gameContainer = $("#gameContainer");
 var freq = 0;
-var isClicked = [];
 var score = 0;
 var previousPicture;
 var previousPictureid;
 var clock;
 
+//return back to the menu.
 BtnMenu.on("click",function(){
     swal({
         title:"Are you sure you want to go back to menu?",
@@ -27,10 +27,7 @@ BtnMenu.on("click",function(){
 });
 
 
-BtnGame.on("click",function(){
-   
-});
-
+//start the game
 BtnStart.on("click",function(){
     contentContainer.hide();
     gameContainer.show();
@@ -39,20 +36,11 @@ BtnStart.on("click",function(){
     clock.start();
 });
 
-function start(){
-    $("#contentContainer").hide();
-    $("#gameContainer").show();
-    for (var i = 1; i<=24; i++){
-        var gameBtn = new GameButton(i.toString());
-    }
-    var gameBtn = new GameButton("1");
-    gameBtn.setGameButton(6);
-}
+//Game rules.
+//When 2 cards are the same, change color of the card and increment score.
 function getPicture(id:string,picture:string){
-    
     document.getElementById(id).innerHTML=picture;
     freq++;
-    isClicked.push(id);
     if (freq == 1){
         previousPictureid = id;
         previousPicture = picture;
@@ -102,9 +90,12 @@ function getPicture(id:string,picture:string){
     }
 
 }
+//Change the score
 function changeScore(score:number){
     $('#score').text("Score: "+score);
 }
+
+//load a flip clock object and when the clock is 0, create game over message.
 $(document).ready(function() {
 	    clock = $('.clock').FlipClock({
 		clockFace: 'MinuteCounter',
@@ -118,7 +109,6 @@ $(document).ready(function() {
                }, function(){
                     reset();
                });
-            
             }
         }
 	});
@@ -126,9 +116,8 @@ $(document).ready(function() {
     
 });
 
+//reset the page
 function reset(){
-    
-   
     location.reload();
     
 }
@@ -151,28 +140,22 @@ class GameButton{
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
-    // The response object is returned with a status field that lets the
-    // app know the current login status of the person.
-    // Full docs on the response object can be found in the documentation
-    // for FB.getLoginStatus().
+   
     if (response.status === 'connected') {
-      // Logged into your app and Facebook.
+     
       testAPI();
     } else if (response.status === 'not_authorized') {
-      // The person is logged into Facebook, but not your app.
+     
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
     } else {
-      // The person is not logged into Facebook, so we're not sure if
-      // they are logged into this app or not.
+     
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
     }
   }
 
-  // This function is called when someone finishes with the Login
-  // Button.  See the onlogin handler attached to it in the sample
-  // code below.
+  //check the login status
   function checkLoginState() {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
@@ -182,23 +165,13 @@ class GameButton{
   window.fbAsyncInit = function() {
   FB.init({
     appId      : '1752409965009814',
-    cookie     : true,  // enable cookies to allow the server to access 
-                        // the session
-    xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.7' // use graph api version 2.5
+    cookie     : true,  
+                       
+    xfbml      : true,  
+    version    : 'v2.7' 
   });
 
-  // Now that we've initialized the JavaScript SDK, we call 
-  // FB.getLoginStatus().  This function gets the state of the
-  // person visiting this page and can return one of three states to
-  // the callback you provide.  They can be:
-  //
-  // 1. Logged into your app ('connected')
-  // 2. Logged into Facebook, but not your app ('not_authorized')
-  // 3. Not logged into Facebook and can't tell if they are logged into
-  //    your app or not.
-  //
-  // These three cases are handled in the callback function.
+
 
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
@@ -215,8 +188,7 @@ class GameButton{
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-  // Here we run a very simple test of the Graph API after login is
-  // successful.  See statusChangeCallback() for when this call is made.
+  //Run a test to show the login user name.
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
