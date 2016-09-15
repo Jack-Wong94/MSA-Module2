@@ -13,9 +13,7 @@
     <body>
         <div class="wrapper">
             <div id="header">
-                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
-                <div id="status"></div>
-                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                <h1 id="score">Score: 0</h1>
                 <div class="clock" style="margin:2em;"></div>  
             </div>
             <div id="contentContainer">
@@ -58,7 +56,10 @@
             </div>
             <div id = "footer">
                 <button id = "BtnMenu">Back To Menu</button>
-                <h1 id="score">Score: 0</h1>
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+                <div id="status"></div>
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                
             </div>
         </div>
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>

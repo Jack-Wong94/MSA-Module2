@@ -157,22 +157,14 @@ background: #bed45d;
 
 }
 #score{
-    float: left;
+    float: right;
 }
 
 .clock {
  position: relative;
  padding-top: 0px;
- top:-130px;
- right:-450px;
- 
  
 
- transform: scale(.54);
- -ms-transform: scale(.54); 
- -webkit-transform: scale(.54); 
- -o-transform: scale(.54); 
- -moz-transform: scale(.54); 
 }
 
 ol.description{
