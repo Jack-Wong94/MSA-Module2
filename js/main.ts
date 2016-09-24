@@ -25,10 +25,15 @@ BtnMenu.on("click",function(){
     });
    
 });
-
+function initClock(){
+    var w = window.outerWidth;
+    var defaultWidth = 2500;
+    var width = w/defaultWidth;
+    $(".clock").css("zoom",width);
+}
 function changeFlipClock(){
     var w = window.outerWidth;
-    var defaultWidth = 2000;
+    var defaultWidth = 2500;
     var width = w/defaultWidth;
     $(".clock").css("zoom",width);
 }
