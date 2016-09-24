@@ -15,7 +15,7 @@ html,body{
 }
 #header{
     background:#00ffff;
-    height:12%;
+    height:115px;
     border: 2px solid black;
     border-style:solid;
     margin-bottom: 5px;
@@ -24,9 +24,10 @@ html,body{
 }
 #contentContainer{
     background:#ccffff;
-    height:70%;
+    position:relative;
+    height:665px;
     width:100%;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     overflow:auto;
     border-radius: 25px;
     border: 2px solid black;
@@ -34,9 +35,9 @@ html,body{
 #gameContainer{
     display:none;
     background:silver; 
-    height:70%;
+    height:665px;
     width:100%;
-    margin-bottom:5px;
+    margin-bottom:3px;
     overflow: auto;
     border-radius:25px;
     border: 2px solid black;
@@ -44,7 +45,7 @@ html,body{
 }
 #footer{
     background: #00bfff;
-    height: 14%;
+    height: 130px;
     border-radius:25px;
     border: 2px solid black;
 }
@@ -53,9 +54,11 @@ html,body{
    
     position: relative;
     display: block;
-    margin:  auto;
-    top:10%;
-     background: #b80059;
+    margin: 0 auto;
+    top:100px;
+    
+    background: #b80059;
+    
   background-image: -webkit-linear-gradient(top, #b80059, #2980b9);
   background-image: -moz-linear-gradient(top, #b80059, #2980b9);
   background-image: -ms-linear-gradient(top, #b80059, #2980b9);
@@ -69,7 +72,7 @@ html,body{
   box-shadow: 7px 13px 3px #666666;
   font-family: Arial;
   color: #ffffff;
-  font-size: 5vmin;
+  font-size: 5vw;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 
@@ -105,7 +108,7 @@ html,body{
   border-radius: 28px;
   font-family: Arial;
   color: #ffffff;
-  font-size:2vmin;
+  font-size:2vw;
   padding: 1em 1em 1em 1em;
   text-decoration: none;
 
@@ -139,7 +142,7 @@ html,body{
   box-shadow: 7px 13px 3px #666666;
   font-family: Arial;
   color: #ffffff;
-  font-size: 2vmin;
+  font-size: 2vw;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 
@@ -161,7 +164,7 @@ background: #bed45d;
 #score{
     position:relative;
     float:right;
-    font-size: 3vmin;
+    font-size: 3vw;
 
 }
 
@@ -182,11 +185,11 @@ ol.description{
     font-size: 36px;
 }
 h1{
-    font-size:8vmin;
+    font-size:5vw;
    
     
 }
 li{
-    font-size:3vmin;
+    font-size:2vw;
     
 }
