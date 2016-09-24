@@ -9,8 +9,8 @@ html,body{
     background-size: cover;
 }
 .wrapper{
-    width: 900px;
-    height:950px;
+    width: 75%;
+    height:100%;
     margin:0 auto;
 }
 #header{
@@ -20,6 +20,7 @@ html,body{
     border-style:solid;
     margin-bottom: 5px;
     border-radius: 25px;
+    overflow:hidden;
 }
 #contentContainer{
     background:#ccffff;
@@ -49,12 +50,11 @@ html,body{
 }
 
 #BtnStart{
-    width : 200px;
-    height: 100px;
+   
     position: relative;
     display: block;
-    margin: 0 auto;
-    top:100px;
+    margin:  auto;
+    top:10%;
      background: #b80059;
   background-image: -webkit-linear-gradient(top, #b80059, #2980b9);
   background-image: -moz-linear-gradient(top, #b80059, #2980b9);
@@ -69,7 +69,7 @@ html,body{
   box-shadow: 7px 13px 3px #666666;
   font-family: Arial;
   color: #ffffff;
-  font-size: 36px;
+  font-size: 5vw;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 
@@ -83,15 +83,16 @@ html,body{
   background-image: linear-gradient(to bottom, #bed45d, #3498db);
   text-decoration: none;
 
+
 }
 .BtnGame{
+   
     height:24%;
     width:15%;
-    
     position:relative;
     margin:0 0;
-    left:35px;
-    top:15px;
+    left:1%;
+    top:1%;
 
     background: #ffff00;
   background-image: -webkit-linear-gradient(top, #34d1d9, #2980b9);
@@ -104,7 +105,7 @@ html,body{
   border-radius: 28px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 36px;
+  font-size:2vw;
   padding: 10px 10px 10px 10px;
   text-decoration: none;
 
@@ -138,7 +139,7 @@ html,body{
   box-shadow: 7px 13px 3px #666666;
   font-family: Arial;
   color: #ffffff;
-  font-size: 36px;
+  font-size: 2vh;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 
@@ -158,13 +159,20 @@ background: #bed45d;
 
 }
 #score{
-    float: right;
+    position:relative;
+    float:right;
+    font-size: 3vw;
+
 }
 
 .clock {
  position: relative;
  padding-top: 0px;
- 
+zoom: 0.5;
+   
+
+
+
 
 }
 
@@ -174,5 +182,11 @@ ol.description{
     font-size: 36px;
 }
 h1{
-    font-size:60px;
+    font-size:8vh;
+   
+    
+}
+li{
+    font-size:3vh;
+    
 }
