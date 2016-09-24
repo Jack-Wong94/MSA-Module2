@@ -10,7 +10,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="./node_modules/flipclock/compiled/flipclock.js"></script>
     </head>
-    <body>
+    <body onresize="changeFlipClock()">
         <div class="wrapper">
             <div id="header">
                 <h1 id="score">Score: 0</h1>
@@ -23,6 +23,7 @@
                     <li> If the two cards match, keep them.</li>
                     <li> If they don't match, turn them back.</li>
                     <li> The game is over when all cards have been matched.</li>
+                    <li> If the counter hits 0, you lose the game.</li>
                 </ol>
               
                 <button id = "BtnStart"> Start</button>

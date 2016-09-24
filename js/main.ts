@@ -26,6 +26,12 @@ BtnMenu.on("click",function(){
    
 });
 
+function changeFlipClock(){
+    var w = window.outerWidth;
+    var defaultWidth = 2000;
+    var width = w/defaultWidth;
+    $(".clock").css("zoom",width);
+}
 
 //start the game
 BtnStart.on("click",function(){

@@ -4,7 +4,7 @@
 }
 html,body{
     width:100%;
-    height: 100%;
+    height: 950px;
     background: url("http://theme.dima-lab.com/okab/images/landing-page-iphone/blurred-home-bg.jpg") no-repeat center center fixed; 
     background-size: cover;
 }
@@ -69,7 +69,7 @@ html,body{
   box-shadow: 7px 13px 3px #666666;
   font-family: Arial;
   color: #ffffff;
-  font-size: 5vw;
+  font-size: 5vmin;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 
@@ -105,8 +105,8 @@ html,body{
   border-radius: 28px;
   font-family: Arial;
   color: #ffffff;
-  font-size:2vw;
-  padding: 10px 10px 10px 10px;
+  font-size:2vmin;
+  padding: 1em 1em 1em 1em;
   text-decoration: none;
 
 
@@ -139,7 +139,7 @@ html,body{
   box-shadow: 7px 13px 3px #666666;
   font-family: Arial;
   color: #ffffff;
-  font-size: 2vh;
+  font-size: 2vmin;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 
@@ -161,7 +161,7 @@ background: #bed45d;
 #score{
     position:relative;
     float:right;
-    font-size: 3vw;
+    font-size: 3vmin;
 
 }
 
@@ -182,11 +182,11 @@ ol.description{
     font-size: 36px;
 }
 h1{
-    font-size:8vh;
+    font-size:8vmin;
    
     
 }
 li{
-    font-size:3vh;
+    font-size:3vmin;
     
 }
